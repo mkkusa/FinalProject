@@ -1,0 +1,722 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(assets/images/background-stars.svg);
+  background-color: #070724;
+}
+
+.container {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+
+  @media (max-width: 1199px) {
+    max-width: 1100px;
+  }
+}
+/* header*/
+
+header {
+  width: 100%;
+  padding: 10px 30px 10px 30px;
+  border-bottom: 3px solid #32324d;
+}
+
+nav {
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h2 {
+  font-size: 24px;
+  font-family: "Anton";
+  font-weight: 400;
+  font-style: normal;
+}
+
+dd {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  list-style-type: none;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: "League Spartan", "sans-serif";
+}
+
+.nav-link.clicked {
+  border-top: 2px solid red;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* body main content*/
+
+main {
+  margin-top: 120px;
+  margin-bottom: 100px;
+}
+
+@media (max-width: 1439px) {
+  main {
+    margin-top: 50px;
+  }
+}
+
+.main-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.planet-holder {
+  width: 100%;
+  max-width: 1096px;
+  margin-left: 150pxpx;
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 1439px) {
+    margin-left: 0;
+    max-width: none;
+    flex-direction: column;
+  }
+
+  @media (max-width: 767px) {
+    margin-bottom: 40px;
+  }
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  max-width: 340px;
+  justify-content: center;
+
+  @media (max-width: 1439px) {
+    max-width: none;
+  }
+}
+
+.planet {
+  margin-top: 50px;
+  display: none;
+}
+
+.planet-image {
+  position: relative;
+
+  @media (max-width: 1439px) {
+    justify-content: center;
+    margin-bottom: 60px;
+    display: flex;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+}
+
+#planet-img {
+  margin-top: 70px;
+  margin-left: 70px;
+  width: 300px;
+  height: 300px;
+}
+
+#geology-img {
+  width: 170px;
+  height: 190px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: 400;
+  color: #fff;
+}
+
+h2 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  color: #fff;
+  margin: 16px 0 16px 24px;
+}
+
+.text {
+  font-size: 15px;
+  font-family: "League Spartan";
+  font-weight: 400;
+  color: #ffffff80;
+  margin-top: 20px;
+  line-height: 24px;
+  min-height: 120px;
+  margin-bottom: 20px;
+
+  @media (max-width: 1439px) {
+    min-height: 80px;
+  }
+}
+
+.source-element {
+  display: flex;
+  margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+    margin-top: 40px;
+  }
+}
+
+.source {
+  color: #fff;
+  opacity: 0.5;
+  font-family: "League Spartan";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  mix-blend-mode: normal;
+
+  @media (max-width: 768px) {
+    font-size: 15px;
+  }
+}
+
+.source-link {
+  color: #fff;
+  opacity: 0.5;
+  font-family: "League Spartan";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  mix-blend-mode: normal;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.551);
+}
+
+h5 {
+  color: #ffffff80;
+}
+
+.aside-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 340px;
+  gap: 25px;
+}
+
+.content {
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 330px;
+  height: 40px;
+  display: flex;
+  cursor: pointer;
+}
+
+.content:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.number {
+  display: flex;
+  color: #fff;
+  opacity: 0.5;
+  font-family: "League Spartan";
+  font-style: normal;
+  font-weight: 700;
+  margin-right: 17px;
+  margin-left: 20px;
+  letter-spacing: 1.92857px;
+  line-height: 25px;
+  font-size: 12px;
+}
+
+.burger-btn {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+}
+
+.burgerMenu {
+  display: none;
+}
+
+.last-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 22px;
+  justify-content: baseline;
+  margin-bottom: 50px;
+}
+
+.about-planet {
+  width: 255px;
+  height: 130px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  flex: start;
+  padding-left: 15px;
+}
+
+.info-text {
+  font-family: "League Spartan";
+  font-size: 12px;
+  opacity: 0.5;
+  font-weight: 700;
+  line-height: 16px;
+  color: #fff;
+}
+
+.info-number {
+  font-family: "Antonio";
+  font-style: normal;
+  font-size: 40px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.header-add {
+  display: none;
+}
+
+@media (max-width: 1439px) {
+  nav {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  h2 {
+    margin-bottom: 0;
+    font-family: "Antonio";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    letter-spacing: -1.05px;
+    color: #fff;
+    margin: 16px 0 16px 24px;
+  }
+
+  dd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .nav-link {
+    display: flex;
+    margin-top: 39px;
+    margin-bottom: 20px;
+    gap: 20px;
+  }
+
+  main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #planet-img {
+    width: 270px;
+    height: 270px;
+  }
+
+  aside {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .planet-info {
+    align-items: normal;
+    max-height: 140px;
+    margin-left: 15px;
+  }
+
+  .text {
+    text-align: left;
+    margin-left: 0;
+    color: #fff;
+  }
+
+  .aside-content {
+    display: flex;
+    max-width: 321px;
+    max-height: 192px;
+    right: 0;
+  }
+
+  .content {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 281px;
+    height: 40px;
+    display: flex;
+  }
+  .about-planet {
+    width: 164px;
+    height: 88px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: normal;
+  }
+
+  .info-text {
+    opacity: 0.5;
+    font-family: "League Spartan";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.727273px;
+    margin-left: 15px;
+  }
+
+  .info-number {
+    font-family: "Antonio";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    letter-spacing: -0.75px;
+    margin-left: 15px;
+  }
+  h3 {
+    opacity: 1;
+    text-align: left;
+    font-family: "League Spartan";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 25px;
+  }
+  .last-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+  }
+}
+
+#burger-nav {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  dd {
+    display: none;
+  }
+
+  .main-nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  h2 {
+    font-family: "Antonio";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: -1.05px;
+    color: #fff;
+    flex-wrap: nowrap;
+  }
+
+  .burgerMenu {
+    display: block;
+    margin-top: 15px;
+    margin-right: 24px;
+  }
+
+  ul,
+  ol {
+    list-style-type: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  button {
+    background: 0;
+    border: 0;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  #burger-nav.show {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    left: 0;
+    top: 70px;
+    padding-top: 44px;
+    background-color: #070724;
+  }
+
+  #burger-nav .nav-list {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .nav-list li {
+    color: #fff;
+    font-family: "League Spartan", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid#b9b5b5;
+  }
+
+  .nav-list li {
+    display: flex;
+    justify-content: baseline;
+    padding-bottom: 20px;
+  }
+
+  .circle1 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline;
+    margin-right: 20px;
+    margin-left: 14px;
+    background-color: rgb(65, 158, 187);
+    color: rgb(65, 158, 187);
+  }
+
+  .circle2 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline;
+    margin-right: 20px;
+    margin-left: 14px;
+    background-color: rgb(247, 204, 127);
+    color: rgb(247, 204, 127);
+  }
+
+  .circle3 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline;
+    margin-right: 20px;
+    margin-left: 14px;
+    background-color: rgb(84, 91, 254);
+    color: rgb(84, 91, 254);
+  }
+
+  .circle4 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline;
+    margin-right: 20px;
+    margin-left: 14px;
+    background-color: rgb(255, 106, 69);
+    color: rgb(255, 106, 69);
+  }
+
+  .circle5 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline;
+    margin-right: 20px;
+    margin-left: 14px;
+    background-color: rgb(236, 173, 122);
+    color: rgb(236, 173, 122);
+  }
+
+  .circle6 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline;
+    margin-right: 20px;
+    margin-left: 14px;
+    background-color: rgb(252, 203, 107);
+    color: rgb(252, 203, 107);
+  }
+
+  .circle7 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline;
+    margin-right: 20px;
+    margin-left: 14px;
+    background-color: rgb(101, 240, 213);
+    color: rgb(101, 240, 213);
+  }
+
+  .circle8 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline;
+    margin-right: 15px;
+    margin-left: 10px;
+    background-color: rgb(73, 126, 250);
+    color: rgb(73, 126, 250);
+  }
+
+  .aside-content {
+    display: none;
+  }
+
+  .header-add {
+    font-family: "League Spartan";
+    font-weight: 700;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    opacity: 0.5;
+    font-size: 8px;
+    border-bottom: 3px solid #32324d;
+    padding: 10px;
+    gap: 35px;
+  }
+
+  h4 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-family: "League Spartan";
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    opacity: 0.5;
+  }
+
+  #planet-img {
+    width: 111px;
+    height: 111px;
+    margin: auto;
+    margin-bottom: 95px;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #planet-name {
+    text-align: center;
+    font-family: "Anton";
+    font-style: normal;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 80px;
+
+    @media (max-width: 1439px) {
+      font-size: 60px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 40px;
+    }
+  }
+  .planet-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  aside {
+    width: 100%;
+  }
+  .text {
+    font-size: 15px;
+    justify-content: center;
+  }
+
+  .last-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 28px 24px 48px;
+  }
+
+  .about-planet {
+    display: flex;
+    flex-direction: row;
+    height: 48px;
+    width: 100%;
+    border: 1px solid #ffffff;
+    color: #fff;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .info-text {
+    opacity: 0.5;
+    font-family: "League Spartan";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    margin-left: 24px;
+    letter-spacing: 0.727273px;
+  }
+
+  .info-number {
+    font-family: "Antonio";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: -0.75px;
+    margin-right: 24px;
+  }
+}
